@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Typist from 'react-typist';
@@ -16,7 +17,7 @@ const Met = () => {
                             <br />
                             <br /> If so click on below Button any time you want.
                             </h3> 
-                            <Link href="https://we.me/923041577841" className="btn-grad text-success">Junaid's Here</Link>
+                            <button onClick={()=>window.location.href ='https://wa.me/923041577841'}  className="btn-grad text-success">Junaid's Here</button>
                             
                         </Typist>
                     </div>
