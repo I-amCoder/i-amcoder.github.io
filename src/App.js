@@ -9,7 +9,7 @@ import Met from './components/Met';
 function App() {
   return (
     <div className="App">
-       <BrowserRouter basename='Portfolio'>
+       <BrowserRouter basename='/Portfolio'>
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/step-2" element={<Met  />} />
