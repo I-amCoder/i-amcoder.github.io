@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://i-amcoder.github.io/Portfolio",
+  "homepage": "https://i-amcoder.github.io/ n",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -14,7 +14,6 @@
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
     "react-typist": "^2.0.5",
-    "react-webcam": "^7.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
