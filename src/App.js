@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Hero from './components/Hero';
-import CustomNav from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Met from './components/Met';

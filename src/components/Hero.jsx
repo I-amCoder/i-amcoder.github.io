@@ -111,7 +111,7 @@ const Hero = () => {
             hideWhenDoneDelay: 1,
           }}
         >
-          Helo Junaid
+          Helo Zoya 😍!
         </Typist>
       </div>
       <div className="row justify-content-center">
