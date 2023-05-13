@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 :root {
   --main-bg-color: ##f4f4f4;
@@ -9,42 +9,31 @@
   --main-tertiary-color: #9e8b6d;
 }
 
-
-*{
-  font-family: 'Pacifico';
+* {
+  font-family: "Pacifico";
   /* color: white */
-  color: linear-gradient( 180.7deg,  rgba(0,213,255,1) 2.5%, rgba(79,255,255,1) 97.7% );
+  color: linear-gradient(
+    180.7deg,
+    rgba(0, 213, 255, 1) 2.5%,
+    rgba(79, 255, 255, 1) 97.7%
+  );
 }
 
 .App {
-  background: #f09819; 
-  background: -webkit-linear-gradient(
-    to right,
-    #edde5d,
-    #f09819
-  );
-  background: linear-gradient(
-    to right,
-    #edde5d,
-    #f09819
-  );
+  background: #f09819;
+  background: -webkit-linear-gradient(to right, #edde5d, #f09819);
+  background: linear-gradient(to right, #edde5d, #f09819);
   min-height: 100vh;
 }
-.name{
+.name {
   font-size: 72px;
-  background-image: radial-gradient( circle 975px at 2.6% 48.3%,  rgba(0,8,120,1) 0%, rgba(95,184,224,1) 99.7% );
-  /* background-image: linear-gradient( 91deg,  rgba(72,154,78,1) 5.2%, rgba(251,206,70,1) 95.9% ); */
+  background-image: linear-gradient(
+    180.7deg,
+    rgba(0, 213, 255, 1) 2.5%,
+    rgba(79, 255, 255, 1) 97.7%
+  );
   -webkit-background-clip: text;
-      -moz-background-clip: text;
+  -moz-background-clip: text;
 
   -webkit-text-fill-color: transparent;
-}
-
-.fade-in {
-  opacity: 0.1;
-  transition: opacity 4s ease-in-out;
-}
-
-.fade-in .fade-in-active {
-  opacity: 1;
 }
