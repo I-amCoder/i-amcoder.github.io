@@ -1,38 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+  --main-bg-color: ##f4f4f4;
+  --main-light-color: ##f4f4f4;
+  --main-dark-color: #152246;
+  --main-primary-color: #9e679e;
+  --main-secondary-color: #a1a4b0;
+  --main-tertiary-color: #9e8b6d;
+}
+
+
+*{
+  font-family: 'Pacifico';
+  /* color: white */
+  color: linear-gradient( 180.7deg,  rgba(0,213,255,1) 2.5%, rgba(79,255,255,1) 97.7% );
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background: #f09819; 
+  background: -webkit-linear-gradient(
+    to right,
+    #edde5d,
+    #f09819
+  );
+  background: linear-gradient(
+    to right,
+    #edde5d,
+    #f09819
+  );
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.name{
+  font-size: 72px;
+  background-image: radial-gradient( circle 975px at 2.6% 48.3%,  rgba(0,8,120,1) 0%, rgba(95,184,224,1) 99.7% );
+  /* background-image: linear-gradient( 91deg,  rgba(72,154,78,1) 5.2%, rgba(251,206,70,1) 95.9% ); */
+  -webkit-background-clip: text;
+      -moz-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+.fade-in {
+  opacity: 0.1;
+  transition: opacity 4s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fade-in .fade-in-active {
+  opacity: 1;
 }
