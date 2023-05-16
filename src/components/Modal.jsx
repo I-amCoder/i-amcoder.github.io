@@ -13,7 +13,7 @@ function ModalDialog({ title, content, isShow, invokeModal }) {
         </Modal.Header>
         <Modal.Body>
           <Typist onTypingDone={()=>{
-            setTimeout(initModal,2000)
+            setTimeout(initModal,4000)
           }}>{content}</Typist>
         </Modal.Body>
         <Modal.Footer>

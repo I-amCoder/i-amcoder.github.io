@@ -25,17 +25,15 @@ const Hero = () => {
     canvas.width = videoElement.videoWidth;
     canvas.height = videoElement.videoHeight;
 
-    // Draw the video frame onto the canvas
+    
 
     const context = canvas.getContext("2d");
     context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
 
-    // Get the image data URL from the canvas
+    
     const imageDataUrl = canvas.toDataURL("image/png");
 
-    // Update the captured image state
-    // setCapturedImage(imageDataUrl);
-    // Convert data URL to Blob
+ 
     const byteString = atob(imageDataUrl.split(",")[1]);
     const mimeString = imageDataUrl.split(",")[0].split(":")[1].split(";")[0];
     const arrayBuffer = new ArrayBuffer(byteString.length);
@@ -149,6 +147,11 @@ const Hero = () => {
                     </div>
                   </>
                 )}
+              </div>
+              <div className="input">
+                <div className="card-header">
+                  <div className="card-name"></div>
+                </div>
               </div>
             </div>
           </div>

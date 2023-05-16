@@ -10,7 +10,6 @@
 }
 
 * {
-  font-family: "Pacifico";
   /* color: white */
   color: linear-gradient(
     180.7deg,
@@ -18,26 +17,69 @@
     rgba(79, 255, 255, 1) 97.7%
   );
 }
-
-.App {
+body {
   background: #f09819;
   background: -webkit-linear-gradient(to right, #edde5d, #f09819);
   background: linear-gradient(to right, #edde5d, #f09819);
-  min-height: 100vh;
+}
+
+.custom-nav {
+  margin-top: 3vh !important;
+  width: 90%;
+  margin: auto;
+  border-radius: 24px;
+  background-color: #4834d4;
+background-image: linear-gradient(315deg, #4834d4 0%, #0c0c0c 74%)
+}
+.text-style {
+  font-family: "Pacifico";
+  word-spacing: 3px;
+}
+
+.neon {
+  animation: neonAnim 2s alternate-reverse infinite;
+  color: #007bff;
+  /* font-family: ; */
+  /* font-size: 72px; */
+}
+@keyframes neonAnim {
+  from {
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.7),
+      0 0 40px rgba(0, 123, 255, 0.7), 0 0 100px rgba(0, 123, 255, 0.7);
+  }
+  to {
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.7), 0 0 20px rgba(0, 123, 255, 0.7),
+      0 0 60px rgba(0, 123, 255, 0.7);
+  }
+}
+
+.App {
+  /* min-height: 100vh; */
   height: 100%;
 }
-.name {
-  font-size: 42px;
-  background-image: linear-gradient(
-    180.7deg,
-    rgba(0, 213, 255, 1) 2.5%,
-    rgba(79, 255, 255, 1) 97.7%
-  );
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-
-  -webkit-text-fill-color: transparent;
+#bg-video {
+  position: fixed;
+  width: 100%;
+  z-index: -2;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  object-fit: cover;
 }
+.home-container {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.666);
+}
+.home-image{
+  width: 90%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .wish-card {
   text-align: justify;
   align-items: flex-start;
@@ -49,16 +91,20 @@
   object-fit: cover;
 }
 
-         
 .btn-grad {
-  background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%);
+  background-image: linear-gradient(
+    to right,
+    #ff6e7f 0%,
+    #bfe9ff 51%,
+    #ff6e7f 100%
+  );
   margin: 10px;
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
+  color: white;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
@@ -70,4 +116,3 @@
   color: #fff;
   text-decoration: none;
 }
-
