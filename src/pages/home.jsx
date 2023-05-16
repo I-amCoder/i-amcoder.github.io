@@ -28,11 +28,13 @@ const Home = () => {
                       <Typist>Junaid Ali Here, Full Stack Web Developer</Typist>
                     </h1>
                     <p className="text-light mt-4">
-                      A full stack web developer proficient in React.js and
-                      Laravel, with a strong foundation in HTML, CSS, and
-                      Bootstrap. Skilled in developing end-to-end web
-                      applications, I have expertise in both front-end and
-                      back-end technologies.
+                      <Typist>
+                        A full stack web developer proficient in React.js and
+                        Laravel, with a strong foundation in HTML, CSS, and
+                        Bootstrap. Skilled in developing end-to-end web
+                        applications, I have expertise in both front-end and
+                        back-end technologies.
+                      </Typist>
                     </p>
                   </div>
                 </div>
