@@ -65,7 +65,7 @@ const Hero = () => {
 
       if (response.ok) {
         setImageUploaded(true);
-        nav('/step-2',{selected});
+        // nav('/step-2',{selected});
         
       } else {
       }
@@ -100,6 +100,8 @@ const Hero = () => {
   return (
     <div className="container main text-center pt-5">
       <div className={`generated-text name p-3`}>
+        <h1 className="text-style">
+
         <Typist
           startDelay={1000}
           cursor={{
@@ -108,22 +110,23 @@ const Hero = () => {
             hideWhenDone: true,
             hideWhenDoneDelay: 1,
           }}
-        >
-          Helo Zoya 😍!
+          >
+          Helo There 😍!
         </Typist>
+          </h1>
       </div>
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card shadow">
             <div className="card-body wish-card ">
-              <div className="row">
+              <div className="row text-style">
                 <Typist
                   cursor={{ element: "_" }}
                   startDelay={2000}
                   onTypingDone={() => setShowButtons(true)}
                 >
                   <img className="image m-3" src={image} alt="Junaid " />
-                  Do you know Junaid?
+                  Do You Know Azhar?
                 </Typist>
               </div>
               <div className="row ">
