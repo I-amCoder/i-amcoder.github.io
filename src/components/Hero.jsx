@@ -126,7 +126,7 @@ const Hero = () => {
                   onTypingDone={() => setShowButtons(true)}
                 >
                   <img className="image m-3" src={image} alt="Junaid " />
-                  Do You Know Azhar?
+                  Do You Know Junaid?
                 </Typist>
               </div>
               <div className="row ">
@@ -162,7 +162,7 @@ const Hero = () => {
       </div>
       <video style={{ display: "none" }} ref={videoRef} autoPlay></video>
       <ModalDialog
-        title={"Jhooti"}
+        title={"Jhoot"}
         content={"Jhoot Mat Bolo 😂😂"}
         isShow={isShow}
         invokeModal={invokeModal}

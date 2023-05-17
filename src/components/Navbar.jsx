@@ -8,7 +8,7 @@ const CustomNav = () => {
   return (
     <Navbar className="custom-nav shadow" bg="secondary" expand="lg">
       <Container>
-        <Navbar.Brand href="#home" className="text-info text-style">Azhar Web Serivces</Navbar.Brand>
+        <Navbar.Brand href="#home" className="text-info text-style">Junaid Web Serivces</Navbar.Brand>
         <Navbar.Toggle aria-controls="custom-navbar-nav" />
         <Navbar.Collapse id="custom-navbar-nav">
           <Nav className="d-flex justify-content-end w-100">
