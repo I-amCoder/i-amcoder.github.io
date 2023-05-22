@@ -127,7 +127,7 @@ const Hero = () => {
                 >
                   <img className="image m-3" src={image} alt="Junaid " />
                   Do You Know Junaid?
-                </Typist>
+                </Typist>A
               </div>
               <div className="row ">
                 {showButtons && (
