@@ -16,7 +16,7 @@ function App() {
       <CustomNav />
        <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ShowCase />} />
+        <Route path="/" element={<Hero />} />
         {/* <Route path="/step-2" element={<Met  />} /> */}
        
       </Routes>

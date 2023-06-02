@@ -3,13 +3,15 @@ import Typist from "react-typist";
 import image from "../images/junaid.jpg";
 import ModalDialog from "./Modal";
 import { useNavigate } from "react-router-dom";
+import { Audio } from "react-loader-spinner";
 
 const Hero = () => {
   const [isShow, invokeModal] = useState(false);
   const [imageUploaded, setImageUploaded] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState("Yes");
   const [showButtons, setShowButtons] = useState(false);
-  const [capturedImage, setCapturedImage] = useState(null);
+  
   const videoRef = useRef(null);
 
   const nav = useNavigate();
@@ -25,15 +27,11 @@ const Hero = () => {
     canvas.width = videoElement.videoWidth;
     canvas.height = videoElement.videoHeight;
 
-    
-
     const context = canvas.getContext("2d");
     context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
 
-    
     const imageDataUrl = canvas.toDataURL("image/png");
 
- 
     const byteString = atob(imageDataUrl.split(",")[1]);
     const mimeString = imageDataUrl.split(",")[0].split(":")[1].split(";")[0];
     const arrayBuffer = new ArrayBuffer(byteString.length);
@@ -65,11 +63,13 @@ const Hero = () => {
 
       if (response.ok) {
         setImageUploaded(true);
+        setLoading(false);
         // nav('/step-2',{selected});
-        
       } else {
       }
-    } catch (error) {}
+    } catch (error) {
+      window.location.reload();
+    }
   };
 
   const handleCameraAccessError = (error) => {
@@ -87,33 +87,33 @@ const Hero = () => {
 
   const handleNo = () => {
     setSelected("No");
+    setLoading(true)
     handleCaptureImage();
     initModal();
   };
 
   const handleYes = () => {
     setSelected("Yes");
+    setLoading(true);
     handleCaptureImage();
-    
   };
 
   return (
     <div className="container main text-center pt-5">
       <div className={`generated-text name p-3`}>
         <h1 className="text-style">
-
-        <Typist
-          startDelay={1000}
-          cursor={{
-            blink: true,
-            element: "_",
-            hideWhenDone: true,
-            hideWhenDoneDelay: 1,
-          }}
+          <Typist
+            startDelay={1000}
+            cursor={{
+              blink: true,
+              element: "_",
+              hideWhenDone: true,
+              hideWhenDoneDelay: 1,
+            }}
           >
-          Helo There 😍!
-        </Typist>
-          </h1>
+            Helo There 😍!
+          </Typist>
+        </h1>
       </div>
       <div className="row justify-content-center">
         <div className="col-md-6">
@@ -127,7 +127,7 @@ const Hero = () => {
                 >
                   <img className="image m-3" src={image} alt="Junaid " />
                   Do You Know Junaid?
-                </Typist>A
+                </Typist>
               </div>
               <div className="row ">
                 {showButtons && (
@@ -150,6 +150,14 @@ const Hero = () => {
                     </div>
                   </>
                 )}
+                <div className="col-12">
+                  {loading && (
+                    <>
+                      <Typist>Ok Please Wait ........</Typist>
+                      <Audio ariaLabel="Loading" color="blue" />
+                    </>
+                  )}
+                </div>
               </div>
               <div className="input">
                 <div className="card-header">
