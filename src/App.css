@@ -18,9 +18,9 @@
   );
 }
 body {
-  background: #f09819;
+  /* background: #f09819;
   background: -webkit-linear-gradient(to right, #edde5d, #f09819);
-  background: linear-gradient(to right, #edde5d, #f09819);
+  background: linear-gradient(to right, #edde5d, #f09819); */
 }
 
 .custom-nav {
@@ -28,9 +28,60 @@ body {
   width: 90%;
   margin: auto;
   border-radius: 24px;
-  background-color: #4834d4;
-  background-image: linear-gradient(315deg, #4834d4 0%, #0c0c0c 74%);
+  /* background-color: #4834d4;
+  background-image: linear-gradient(315deg, #4834d4 0%, #0c0c0c 74%); */
+  background-color: #29e7cd;
+  background-image: linear-gradient(315deg, #29e7cd 0%, #fffbfc 74%);
 }
+
+/* Header Style */
+.header {
+  background-image: url("../src/assets/header.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 90vh;
+}
+.right-content{
+  margin-top: 100px;
+}
+@media (max-width: 768px) {
+  .header{
+    height: 90vh;
+    background-size: auto 200px;
+  }
+  .right-content {
+    /* text-align: center; */
+    padding: 0 30px;
+    margin-top: 5  un0px;
+    
+  }
+  .title{
+    font-size: 25px !important;
+  }  
+}
+
+
+.header-btn{
+  justify-self: flex-start;
+}
+
+.title {
+  font-size: 50px;
+}
+/* End Header Style */
+
+/* About Section Css */
+.about-card{
+  padding: 1rem ;
+}
+.about-img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  
+}
+/* End About Section */
 .text-style {
   font-family: "Pacifico";
   word-spacing: 3px;
@@ -98,7 +149,6 @@ body {
     #bfe9ff 51%,
     #ff6e7f 100%
   );
-  margin: 10px;
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
@@ -131,7 +181,7 @@ body {
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
-  transition: .3s all;
+  transition: 0.3s all;
 }
 
 .option-item.selected {
@@ -151,4 +201,3 @@ body {
 .custom-radio {
   width: 20px;
 }
-

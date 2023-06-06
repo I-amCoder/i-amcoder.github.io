@@ -7,6 +7,31 @@ $theme-colors: (
   "dark": #012622,
   "success": #15c115,
 );
+.btn.btn-primary {
+  background-image: linear-gradient(
+    to right,
+    #ff6e7f 0%,
+    #bfe9ff 51%,
+    #ff6e7f 100%
+  );
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgba(9, 9, 121, 1);
+  box-shadow: 0 0 20px #eee;
+  font-weight: bold;
+  border-radius: 10px;
+  display: block;
+  border: none;
+}
+
+.btn.btn-primary:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: rgba(9, 9, 121, 1);
+  text-decoration: none;
+}
 
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";
