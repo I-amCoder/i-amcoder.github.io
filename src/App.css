@@ -29,7 +29,7 @@ body {
   margin: auto;
   border-radius: 24px;
   background-color: #4834d4;
-background-image: linear-gradient(315deg, #4834d4 0%, #0c0c0c 74%)
+  background-image: linear-gradient(315deg, #4834d4 0%, #0c0c0c 74%);
 }
 .text-style {
   font-family: "Pacifico";
@@ -74,7 +74,7 @@ background-image: linear-gradient(315deg, #4834d4 0%, #0c0c0c 74%)
   bottom: 0;
   background: rgba(0, 0, 0, 0.666);
 }
-.home-image{
+.home-image {
   width: 90%;
   border-radius: 50%;
   object-fit: cover;
@@ -104,8 +104,9 @@ background-image: linear-gradient(315deg, #4834d4 0%, #0c0c0c 74%)
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;
+  color: rgba(9, 9, 121, 1);
   box-shadow: 0 0 20px #eee;
+  font-weight: bold;
   border-radius: 10px;
   display: block;
   border: none;
@@ -113,6 +114,41 @@ background-image: linear-gradient(315deg, #4834d4 0%, #0c0c0c 74%)
 
 .btn-grad:hover {
   background-position: right center; /* change the direction of the change here */
-  color: #fff;
+  color: rgba(9, 9, 121, 1);
   text-decoration: none;
 }
+
+.question-box {
+  margin-top: 20px;
+}
+
+.option-item {
+  cursor: pointer;
+  border-radius: 10px !important;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  transition: .3s all;
+}
+
+.option-item.selected {
+  color: white;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 10 px !important;
+}
+.radio-label {
+  cursor: pointer;
+}
+.custom-radio {
+  width: 20px;
+}
+
