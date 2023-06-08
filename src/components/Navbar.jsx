@@ -16,12 +16,22 @@ const CustomNav = () => {
         <Navbar.Toggle aria-controls="custom-navbar-nav" />
         <Navbar.Collapse id="custom-navbar-nav">
           <Nav className="d-flex fw-bold justify-content-end w-100">
-            <Link to={'/survey'}>
-              <Nav.Link>Survey</Nav.Link>
-            </Link>
-            <Link to={'#about'}>
-              <Nav.Link>About</Nav.Link>
-            </Link>
+            <Nav.Link>
+              <Link className="nav-link" to={"/intro"}>
+                Intro
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link className="nav-link" to={"/survey"}>
+                Survey
+              </Link>
+            </Nav.Link>
+
+            <Nav.Link>
+              <Link className="nav-link" to={"/#about"}>
+                About
+              </Link>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

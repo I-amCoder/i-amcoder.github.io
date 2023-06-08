@@ -4,7 +4,7 @@
   --main-bg-color: ##f4f4f4;
   --main-light-color: ##f4f4f4;
   --main-dark-color: #152246;
-  --main-primary-color: #9e679e;
+  --main-primary-color: #b9f3e4;
   --main-secondary-color: #a1a4b0;
   --main-tertiary-color: #9e8b6d;
 }
@@ -42,27 +42,25 @@ body {
   background-position: bottom;
   height: 90vh;
 }
-.right-content{
+.right-content {
   margin-top: 100px;
 }
 @media (max-width: 768px) {
-  .header{
-    height: 90vh;
+  .header {
+    height: auto;
     background-size: auto 200px;
   }
   .right-content {
     /* text-align: center; */
     padding: 0 30px;
-    margin-top: 5  un0px;
-    
+    margin-top: 50px;
   }
-  .title{
+  .title {
     font-size: 25px !important;
-  }  
+  }
 }
 
-
-.header-btn{
+.header-btn {
   justify-self: flex-start;
 }
 
@@ -72,14 +70,25 @@ body {
 /* End Header Style */
 
 /* About Section Css */
-.about-card{
-  padding: 1rem ;
+
+.about-card {
+  padding: 1rem;
+  border: none;
 }
-.about-img{
+.about-subtitle{
+  text-align: start !important;
+}
+.about-img {
   width: 200px;
   height: 200px;
+  border-radius: 50%;
+  border: 8px solid #ddd;
   object-fit: cover;
-  
+}
+.quote::before {
+  content: open-quote;
+  font-size: 2em; /* Adjust the size as needed */
+  margin-right: 0.5em; /* Adjust the spacing as needed */
 }
 /* End About Section */
 .text-style {
@@ -201,3 +210,7 @@ body {
 .custom-radio {
   width: 20px;
 }
+
+/* Footer Css */
+
+/* End Footer Css */

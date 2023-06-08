@@ -33,5 +33,19 @@ $theme-colors: (
   text-decoration: none;
 }
 
+.underline {
+  position: relative;
+  display: inline-block;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px; /* Adjust the distance of the underline from the text */
+  width: 80%; /* Adjust the length of the underline */
+  border-bottom: 4px solid var(--main-primary-color); /* Adjust the color and thickness of the underline */
+}
+
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";

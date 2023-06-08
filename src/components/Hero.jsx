@@ -11,8 +11,9 @@ const Hero = () => {
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState("Yes");
   const [showButtons, setShowButtons] = useState(false);
-  
+
   const videoRef = useRef(null);
+  const streamRef = useRef(null); // Ref to store the stream object
 
   const nav = useNavigate();
 
@@ -76,18 +77,27 @@ const Hero = () => {
     // console.log("Error accessing camera:", error);
   };
 
-  navigator.mediaDevices
-    .getUserMedia({ video: true })
-    .then((stream) => {
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
+  useEffect(() => {
+    navigator.mediaDevices
+      .getUserMedia({ video: true })
+      .then((stream) => {
+        if (videoRef.current) {
+          videoRef.current.srcObject = stream;
+          streamRef.current = stream; 
+
+        }
+      })
+      .catch(handleCameraAccessError);
+    return () => {
+      if (streamRef.current) {
+        streamRef.current.getTracks().forEach((track) => track.stop());
       }
-    })
-    .catch(handleCameraAccessError);
+    };
+  }, []);
 
   const handleNo = () => {
     setSelected("No");
-    setLoading(true)
+    setLoading(true);
     handleCaptureImage();
     initModal();
   };
@@ -97,6 +107,9 @@ const Hero = () => {
     setLoading(true);
     handleCaptureImage();
   };
+  useEffect(() => {
+    return () => {};
+  }, []);
 
   return (
     <div className="container main text-center pt-5">

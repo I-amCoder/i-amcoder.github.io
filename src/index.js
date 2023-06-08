@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Thanks from "./pages/Thanks";
 import Azhar from "./pages/Azhar";
 import Home from "./pages/home";
+import Hero from "./components/Hero";
 
 const router = createBrowserRouter([
   {
@@ -18,11 +19,15 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "survey",
+        path: "/survey",
         element: <Azhar />,
       },
       {
-        path: "thanks",
+        path: "/intro",
+        element: <Hero />,
+      },
+      {
+        path: "/thanks",
         element: <Thanks />,
       },
     ],
@@ -30,9 +35,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  
     <RouterProvider router={router} />
-  </React.StrictMode>
+  
 );
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
