@@ -4,7 +4,7 @@ $theme-colors: (
   "danger": #ff0e0e,
   "info": #f6e6c2,
   "light": #f4f4f4,
-  "dark": #012622,
+  "dark": #030e2a,
   "success": #15c115,
 );
 .btn.btn-primary {
@@ -33,6 +33,17 @@ $theme-colors: (
   text-decoration: none;
 }
 
+.btn.btn-secondary {
+  background: rgb(221, 221, 221);
+  background: linear-gradient(
+    90deg,
+    rgba(221, 221, 221, 1) 0%,
+    rgba(41, 231, 205, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: none;
+}
+
 .underline {
   position: relative;
   display: inline-block;
@@ -42,11 +53,10 @@ $theme-colors: (
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0px; /* Adjust the distance of the underline from the text */
+  bottom: -5px; /* Adjust the distance of the underline from the text */
   width: 80%; /* Adjust the length of the underline */
   border-bottom: 4px solid var(--main-primary-color); /* Adjust the color and thickness of the underline */
 }
-
 
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";

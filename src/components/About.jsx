@@ -4,10 +4,25 @@ import image from "../assets/about.png";
 import {
   BsFacebook,
   BsInstagram,
-  BsLink45Deg,
   BsLinkedin,
   BsWhatsapp,
 } from "react-icons/bs";
+import { SiFiverr, SiUpwork, } from "react-icons/si";
+
+import { styled } from "styled-components";
+import Stars from "./Stars";
+
+const Fiverr = styled(SiFiverr)`
+  font-size: 8rem;
+  color: #1dbf73;
+`;
+const Upwork = styled(SiUpwork)`
+  font-size: 8rem;
+  color: #1dbf73;
+`;
+
+
+
 
 const About = () => {
   return (
@@ -30,27 +45,68 @@ const About = () => {
                 </p>
                 <a
                   href={
-                    "https://wa.me/923041577941?text='I've contacted from website'"
+                    "https://wa.me/923041577841?text='I've contacted from website'"
                   }
                   className="btn btn-primary"
                 >
                   Contact Me
                 </a>
-                <div className="social-row">
-                  <a target="_blank" href="https://www.linkedin.com/in/junaid-ali-a82ba021b/">
+
+                <div className="social-row ">
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/junaid-ali-a82ba021b/"
+                  >
                     <BsLinkedin className="social linkedin" />
                   </a>
-                  <a target="_blank" href="https://web.facebook.com/hacker.jhalla">
+                  <a
+                    target="_blank"
+                    href="https://web.facebook.com/hacker.jhalla"
+                  >
                     <BsFacebook className="social facebook" />
                   </a>
-                  <a target="_blank" href={"https://wa.me/923041577941?text='I've contacted from website'"} >
+                  <a
+                    target="_blank"
+                    href={
+                      "https://wa.me/923041577841?text='I've contacted from website'"
+                    }
+                  >
                     <BsWhatsapp className="social whatsapp" />
                   </a>
-                  <a target="_blank" href="https://www.instagram.com/junaidinstalker/">
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/junaidinstalker/"
+                  >
                     <BsInstagram className="social instagram" />
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="row my-5">
+          <div className="col-12">
+            <h1 className="underline">HIRE ME ON </h1>
+          </div>
+        </div>
+        <div className="row mt-4 justify-content-center text-center">
+          <div className="col-md-6">
+            <div className="border-radius-5 py-4 shadow ">
+              <Fiverr />
+              <h3>Fiverr</h3>
+              <Stars rating={5}  />
+              <h6 className="text-dark">Level One Seller with 28+ five star reviews</h6>
+              <a href="https://www.fiverr.com/junaidseller" target="_blank" className="btn btn-secondary">Order Now</a>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="border-radius-5 py-4 shadow mt-4 mt-md-0">
+              <Upwork />
+              <h3>Upwork</h3>
+              <Stars rating={5}  />
+              <h6 className="text-dark">Multiple Jobs done with 5 star reviews</h6>
+              <a href="https://www.upwork.com/freelancers/~0103dd022df3b8e518" target="_blank" className="btn btn-secondary">Hire Now</a>
             </div>
           </div>
         </div>
