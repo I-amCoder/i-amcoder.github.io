@@ -3,10 +3,16 @@ import React from "react";
 const Footer = () => {
   return (
     <footer id="footer" className=" bg-primary">
-      <div className="container">
+      <div className="container py-4">
+        <div className="row">
+          <div className="col-12">
+            <h2>Junaid Web Services</h2>
+
+          </div>
+        </div>
         <div className="row">
           <div className="py-4 col-md-6 col-xl-4">
-            <h4>Junaid Web Services</h4>
+            <h4 >About Links</h4>
             <h6>Helo</h6>
             <h6>Helo</h6>
             <h6>Helo</h6>

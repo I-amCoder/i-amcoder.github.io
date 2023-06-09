@@ -5,7 +5,7 @@
   --main-light-color: ##f4f4f4;
   --main-dark-color: #152246;
   --main-primary-color: #29e7cd;
-  --main-secondary-color: #a1a4b0;
+  --main-secondary-color: #ff6e7f;
   --main-tertiary-color: #9e8b6d;
 }
 
@@ -78,8 +78,8 @@ body {
 .about-left-section .about-img {
   width: 100%;
   height: auto;
-  /* border-radius: 50%;
-  border: 8px solid #ddd; */
+  border-radius: 50%;
+  /* border: 8px solid #ddd; */
   object-fit: cover;
 }
 .quote::before {
@@ -87,6 +87,30 @@ body {
   font-size: 2em; /* Adjust the size as needed */
   margin-right: 0.5em; /* Adjust the spacing as needed */
 }
+
+.social-row{
+  padding: 10px;
+  display: inline-flex;
+}
+.social-row a{
+  padding: 5px;
+}
+.social-row a .social{
+  font-size: 2rem;
+}
+.social-row a .facebook{
+  color: #3b5998;
+}
+.social-row a .linkedin{
+  color: #0C63BC;
+}
+.social-row a .instagram{
+  color: #FD1D1D ;
+}
+.social-row a .facebook{
+  color: #075E54 ;
+}
+
 /* End About Section */
 .text-style {
   font-family: "Pacifico";

@@ -1,6 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
-import image from "../images/junaid.jpg";
+import image from "../assets/about.png";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsLink45Deg,
+  BsLinkedin,
+  BsWhatsapp,
+} from "react-icons/bs";
 
 const About = () => {
   return (
@@ -26,7 +33,23 @@ const About = () => {
                     "https://wa.me/923041577941?text='I've contacted from website'"
                   }
                   className="btn btn-primary"
-                >Contact Me</a>
+                >
+                  Contact Me
+                </a>
+                <div className="social-row">
+                  <a target="_blank" href="https://www.linkedin.com/in/junaid-ali-a82ba021b/">
+                    <BsLinkedin className="social linkedin" />
+                  </a>
+                  <a target="_blank" href="https://web.facebook.com/hacker.jhalla">
+                    <BsFacebook className="social facebook" />
+                  </a>
+                  <a target="_blank" href={"https://wa.me/923041577941?text='I've contacted from website'"} >
+                    <BsWhatsapp className="social whatsapp" />
+                  </a>
+                  <a target="_blank" href="https://www.instagram.com/junaidinstalker/">
+                    <BsInstagram className="social instagram" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
